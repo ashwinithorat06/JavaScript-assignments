@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 23-a
++ Title             : Write a JavaScript program to remove specified number of characters from a string.
++Description        : In this case you must be able to remove the specified number of characters from string, 
+                      given the position and the number of characters.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 20-May-2020
++ End Date          : 20-May-2020
+-------------------------------------------------------------------------------------------->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //take string from user
+        var str = prompt("Enter string");
+        document.write("Input : " + str);
+        var newstr = str.split("");
+
+        //getting position 
+        var position = +prompt("Enter position");
+        document.write("<br>Position : " + position);
+
+        //getting number of characters
+        var char = +prompt("Enter number of chatcters you want to remove");
+        document.write("<br>Number of characters : " + char);
+
+        var characters = 0;
+        characters = position + char;
+        for (var i = 0; i < newstr.length; i++) {
+            if (i >= position && i <= characters) {
+                //delete characters
+                delete newstr[i];
+            }
+        }
+        //display result
+        document.write("<br>Output : " + newstr.join(""));
+    </script>
+</body>
+
+</html>

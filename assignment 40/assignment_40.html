@@ -1,0 +1,51 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 40
++ Title             : Write a JavaScript function to get the value of href ,hreflang ,rel ,target and type attributes of the specified links.
++ Description       : Create a html page with a link which should have href, hreflang, rel, target, and type attributes.
+                      Your job is call a function in javascript which should return those values to the user.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 02-June-2020
++ End Date          : 02-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 40</title>
+    <style>
+        h2 {
+            color: rgb(139, 0, 65);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>get values of attributes</h2>
+    <a id="one" href="https://www.google.com" hreflang="en-us" rel="nofollow" target="_blank"
+        type="text/html">Google</a><br><br>
+    <button onclick="get_values()">click here</button>
+
+    <script>
+        //function declaration
+        function get_values() {
+            //store values in variables
+            var a = document.getElementById("one").href;
+            var b = document.getElementById("one").hreflang;
+            var c = document.getElementById("one").rel;
+            var d = document.getElementById("one").target;
+            var e = document.getElementById("one").type;
+            //display values
+            document.write("<b>The value of href attribute is : " + a);
+            document.write("<br>The value of hreflang attribute is : " + b);
+            document.write("<br>The value of rel attribute is : " + c);
+            document.write("<br>The value of target attribute is : " + d);
+            document.write("<br>The value of type attribute is : " + e);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 13
++ Title             : Write a Javascript program to input a number and check whether it is odd or even.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 07-May-2020
++ End Date          : 07-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even/odd</title>
+    <style>
+        h2 {
+            color: rgb(16, 62, 202);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>check even/odd number</h2>");
+        //take number from user
+        var n = +(prompt("enter number", "n"));
+
+        //funcion definition
+        function even(a) {
+            //check whether number is even or odd and display result
+            if (a % 2 == 0) {
+                document.write("Given number " + a + " is even");
+            }
+            else
+                document.write("Given number " + a + " is odd");
+        }
+
+        //function call
+        even(n);    
+    </script>
+</body>
+
+</html>

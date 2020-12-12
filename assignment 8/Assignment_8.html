@@ -1,0 +1,43 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 8
++ Title             : Write a Javascript program to generate following sum of series
+                        a) 1 + 1/2 +1/3 +...............................+1/n.
+                        b) 2 + 4 + 6 +.........................................+n.
+
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 05-May-2020
++ End Date          : 05-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-8</title>
+    <style>
+        h3{
+            color: rgb(19, 116, 116);
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h3>Assignment number 8</h3>")
+        //take length of series from user
+        var n = +(prompt("enter the length of the series", "n"));
+        var sum = 0;
+        var add = 0;
+        //adding the numbers in series
+        for(var i = 1; i<=n; i++){
+            // sum = sum + 1/i;
+            sum += 1/i;  
+            add += i*2;    
+        }
+        //display results
+        document.write("a)Sum of given series = " +sum);
+        document.write("<br><br> b) " + add);
+    </script>
+</body>
+</html>

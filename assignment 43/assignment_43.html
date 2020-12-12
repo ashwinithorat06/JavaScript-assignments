@@ -1,0 +1,60 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 43
++ Title             : Write a JavaScript program to create three paragraphs with different class name and manipulate
+                      style rules using CSS class selectors.
++ Description       : Create a html page with 3 paragraph.
+                      Your job is call a function in javascript which will dynamically change the style of the paragraph.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 03-June-2020
++ End Date          : 03-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 43</title>
+    <style>
+        h2 {
+            color: rgb(139, 0, 65);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>manipulate style rules using CSS class selectors.</h2>
+    <!----create paragraphs----->
+    <p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. At vitae omnis vel recusandae mollitia
+        quisquam, aperiam voluptates similique maxime dicta sint, unde beatae enim molestias modi doloribus minus
+        laborum esse!
+        Quasi dicta dolores nemo nulla et sunt quo magnam quam consectetur, delectus, molestias consequatur ducimus
+        voluptatibus voluptatem rem quae eligendi dolorem, libero fuga? Nostrum quae veritatis, maiores corrupti
+        doloremque quaerat.
+    </p>
+    <p class="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus pariatur repellendus ea quisquam. Iste
+        vitae.</p>
+    <p class="three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nam, explicabo.</p>
+    <!----create buttons and invoking functions on click event---->
+    <button onclick="change_style()">Click me</button>
+
+    <script>
+        function change_style() {
+            //changing style using class selector
+            var a = document.getElementsByClassName("one");
+            a[0].style.backgroundColor = "maroon";
+            a[0].style.color = "blue";
+            var b = document.getElementsByClassName("two");
+            b[0].style.backgroundColor = "red";
+            b[0].style.color = "white";
+            var c = document.getElementsByClassName("three");
+            c[0].style.backgroundColor = "green";
+            c[0].style.color = "red";
+
+        }
+    </script>
+</body>
+
+</html>

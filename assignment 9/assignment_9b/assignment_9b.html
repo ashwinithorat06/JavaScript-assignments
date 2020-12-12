@@ -1,0 +1,33 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 9-b
++ Title             : Write a Javascript program to generate a Random Integer.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 05-May-2020
++ End Date          : 05-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-9b</title>
+    <style>
+        h3{
+            color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<h3>9-b) Random Integer</h3>")
+        //take range from user
+        var n = +(prompt("enter range to generate random integer"))
+
+        //floor method rounds a number downwards to nearest integer.
+        //random method returns a number from 0 upto but not including 1.
+        document.write("Input : Specified range = " +n);
+        var x = Math.floor((Math.random() * n) + 1);
+        document.write("<br>Output : " +x+ "(Random number between 1 to " +n+ " )");
+    </script>
+</body>
+</html>

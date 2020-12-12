@@ -1,0 +1,70 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 42
++ Title             : Write a JavaScript program a) To create three paragarph
+                      b) Create three buttons left ,right and center.
+                      c) Dynamically change the allignment of paragraph by using the getElementByTagName().
++ Description       : Create a html page with 3 paragraph and 3 buttons left, right and center.
+                      Your job is call a function in javascript which will dynamically align the paragraph by using the getElemnetByTagName().
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 03-June-2020
++ End Date          : 03-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 42</title>
+    <style>
+        h2 {
+            color: rgb(216, 219, 21);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Dynamically change the allignment of paragraph by using the getElementByTagName()</h2>
+    <!----create paragraphs----->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At vitae omnis vel recusandae mollitia quisquam, aperiam
+        voluptates similique maxime dicta sint, unde beatae enim molestias modi doloribus minus laborum esse!
+        Quasi dicta dolores nemo nulla et sunt quo magnam quam consectetur, delectus, molestias consequatur ducimus
+        voluptatibus voluptatem rem quae eligendi dolorem, libero fuga? Nostrum quae veritatis, maiores corrupti
+        doloremque quaerat.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus pariatur repellendus ea quisquam. Iste vitae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nam, explicabo.</p>
+    <!----create buttons and invoking functions on click events---->
+    <button onclick="left_align()">Left</button>
+    <button onclick="center_align()">Center</button>
+    <button onclick="right_align()">Right</button>
+
+    <script>
+        //function declaration
+        //align text to left
+        function left_align() {
+            var x = document.getElementsByTagName("p");
+            x[0].style.textAlign = "left";
+            x[1].style.textAlign = "left";
+            x[2].style.textAlign = "left";
+        }
+        //align text to center
+        function center_align() {
+            var x = document.getElementsByTagName("p");
+            x[0].style.textAlign = "center";
+            x[1].style.textAlign = "center";
+            x[2].style.textAlign = "center";
+        }
+        //align text to right
+        function right_align() {
+            var x = document.getElementsByTagName("p");
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.textAlign = "right";
+            }
+        }
+    </script>
+</body>
+
+</html>

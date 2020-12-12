@@ -1,0 +1,247 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 49
++ Title             : Write a JavaScript program to create email registration form and validate the following data , all the fields must have entered data.
+                    a) Enter The FirstName and LastName . Define PlaceHolder and field size 10.
+                    b) Enter the User Name . User Name should be of minimum 8 character.
+                    c) Enter the Password and confirm it in the next box .[ Pasword between 6 to
+                    20 characters which contain at least one numeric digits ,one uppercase and one lowercase letter.
+                    d) Enter the birthday starting from month of Birth , day , year.
+                    e) Select Your Country . f) Select your gender ( Create checkbox)
+                    g) Enter the phone Number . (Phone number should be of 10 digits with no comma , no space , no punctuation mark.
+                    h) Enter alternative Email address.
+                    i) Agree to the Google terms of service and privacy policy by ticking the box.
+                    j) Click the submit button. On submit the form welcome message shoulddisplay.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 07-June-2020
++ End Date          : 07-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration form</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .col-sm-10 {
+            padding-bottom: 1em;
+        }
+    </style>
+    <script>
+        //function definition for registration form validation
+        function validateForm(myForm) {
+            //debugger;
+            //fetching data
+            var firstName = document.myForm.firstName.value;
+            var lastName = document.myForm.lastName.value;
+            var userName = document.myForm.userName.value;
+            //checking if any field is left blank
+            if ((firstName.length == 0) || (lastName.length == 0) || userName.length == 0) {
+                alert("field must not be empty");
+                return false;
+            }
+            //regex to check for user name
+            re = /^\w+$/;
+            if (!re.test(document.myForm.userName.value) && (userName.length < 8)) {
+                alert("Username must contain only letters, nums , '_' and must have arlest 8 characters!");
+                return false;
+            }
+            //password validation
+            var pwd = document.myForm.pwd.value; //password
+            var cpwd = document.myForm.cpwd.value;  //confirm password
+            // check if password field is not empty & matches confirm password field
+            if (pwd.length != 0 && (pwd == cpwd)) {
+                if (pwd.length <= 6) { //check if password length is not less than 6 
+                    alert("Password must contain at least six characters!");
+                    return false;
+                }
+                if (pwd == userName) { //check if password and username are not same
+                    alert("Password must be different from Username!");
+                    return false;
+                }
+                re = /[0-9]/; //regex for password validation of number
+                if (!re.test(pwd)) {
+                    alert(" password must contain at least 1 number");
+                    return false;
+                }
+                re = /[a-z]/;   //regex for password validation of lowercase
+                if (!re.test(pwd)) {
+                    alert(" password must contain at least one lowercase letter (a-z)!");
+                    return false;
+                }
+                re = /[A-Z]/;   //regex for password validation of uppercase
+                if (!re.test(pwd)) {
+                    alert(" password must contain at least one uppercase letter (A-Z)!");
+                    return false;
+                }
+            }
+            else {
+                alert(" Please check that you've entered your password!");
+                return false;
+            }
+            //check for country is selected or not     
+            var country = document.myForm.country.value;
+            if (document.myForm.country.selectedIndex == 0) {
+                alert("please select your country");
+                return false;
+            }
+            //check if terms and conditions check box is selected
+            var terms = document.myForm.terms.value;
+            if (terms.checked == false) {
+                alert("please check the terms and privacy policy");
+                return false;
+            }
+            //check for mail id validation using regex
+            var email = document.myForm.email.value;
+            var reg = new RegExp("[a-z]+\@[a-z]+\.[a-z]+"); //ex: javascript@google.com
+            if (!reg.test(email)) {
+                alert("enter valid mail id");
+                return false;
+            }
+            var DOB = document.myForm.DOB.value;
+            //check if gender is selected
+            if (document.getElementById("male").checked) {
+                gender = document.getElementById("male").value;
+            }
+            else if (document.getElementById("female").checked) {
+                gender = document.getElementById("female").value;
+            }
+            else if (document.getElementById("other").checked) {
+                gender = document.getElementById("other").value;
+            }
+            else {
+                alert("gender is not selected");
+                return false;
+            }
+
+            var PhNo = document.getElementById("PhNo").value;
+            if (PhNo.length != 10) {
+                alert("please enter valid phone number");
+                return false;
+            }
+            var Aemail = document.getElementById("Aemail").value;
+            //display details 
+            document.write("firstName: " + firstName + "<br>");
+            document.write("lastName: " + lastName + "<br>");
+            document.write("Username:  " + userName + "<br>");
+            document.write("Email: " + email + "<br>");
+            document.write("Date of birth: " + DOB + "<br>");
+            document.write("Country: " + country + "<br>");
+            document.write("Gender: " + gender + "<br>");
+        }
+    </script>
+
+    <h2>Registration Form</h2>
+    <form name="myForm" onsubmit="return validateForm();" method="POST">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="firstName">First name:</label>
+            <div class="col-sm-10">
+                <input type="text" id="firstName" class="form-control" size="10" placeholder="first name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="lastName">Last name:</label>
+            <div class="col-sm-10">
+                <input type="text" id="lastName" class="form-control" size="10" placeholder="last name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="userName">User Name:</label>
+            <div class="col-sm-10">
+                <input type="text" id="userName" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" id="email" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">
+                <input type="password" id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="cpwd">Confirm password</label>
+            <div class="col-sm-10">
+                <input type="password" id="cpwd" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="DOB">Date of Birth:</label>
+            <div class="col-sm-10">
+                <input type="date" id="DOB" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="country">Country:</label>
+            <div class="col-sm-10">
+                <select id="country" name="country">
+                    <option value="0">Please select a country</option>
+                    <option value="India">India</option>
+                    <option value="USA"> The United States of America</option>
+                    <option value="England"> England</option>
+                    <option value="Australia">Australia</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="gender">Gender:</label>
+                <div class="col-sm-10">
+                    <input type="radio" id="male" name="gender" value="male"> Male
+                    <input type="radio" id="female" name="gender" value="female"> Female
+                    <input type="radio" id="other" name="gender" value="other"> Other
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="PhNo">Phone No:</label>
+                <div class="col-sm-10">
+                    <input type="number" id="PhNo" class="form-control" maxlength="10" pattern="[1-9]{1}[0-9]{9}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Aemail"> Alternate Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" id="Aemail" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label> <input type="checkbox" id="terms"> By signing up to you agree to our <a
+                                href="terms.txt">Terms of Service</a> and <a href="privacy.txt">Privacy of
+                                Policy</a></label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">submit</button>
+
+                    <button type="reset" class="btn btn-default">Reset</button>
+
+
+                </div>
+            </div>
+
+    </form>
+</body>
+
+</html>

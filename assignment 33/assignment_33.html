@@ -1,0 +1,43 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 33
++ Title             : Write a JavaScript program to find area and perimeter of rectangle.
++Description        : Create an object rectangle and have the properties like width, height.
+                      Rectangle object should contain 2 function, one is area and other is perimeter.
+                      Calculate the area and perimeter of rectangle using the object Rectangle.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 18-May-2020
++ End Date          : 18-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 33</title>
+</head>
+
+<body>
+    <script>
+        //create object
+        var rectangle = {
+            width: 11, height: 12,
+
+            //creating 2 functions for area and perimeter
+            area: function () {
+                var rectarea = this.width * this.height;
+                document.write("rectangle area = " + rectarea);
+            },
+            p: function () {
+                var perimeter = 2 * (this.width + this.height);
+                document.write("<br>rectangle perimeter = " + perimeter);
+            }
+        };
+
+        //function call
+        rectangle.area();
+        rectangle.p();
+    </script>
+</body>
+
+</html>

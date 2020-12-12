@@ -1,0 +1,60 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 39
++ Title             : Write a JavaScript to modify the style of paragraph , while clicking the button font , font size and
+                      color of the pargaraph will be changed.
++ Description       : Create a html page with a paragragh and 3 button change font, font size, change color.
+                      Modify the style of the content when clicked on chage font, change the color and font size
+                      when clicked on change color and font size.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 02-June-2020
++ End Date          : 02-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 39</title>
+    <style>
+        h2 {
+            color: rgb(18, 55, 104);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>modify the style of paragraph</h2>
+    <!---create paragraph----->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit error dolorem ullam, vitae tempore dicta
+        possimus recusandae natus, fugiat officiis eaque obcaecati, fuga asperiores optio vero explicabo magnam animi
+        alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum similique aspernatur distinctio!
+        Voluptatem vel rerum ipsam minima! Suscipit earum excepturi laudantium itaque sunt pariatur libero, fugit est
+        quia, harum voluptas?</p>
+    <!-----create 3 buttons---->
+    <button onclick="change_font()">Change Font</button>
+    <button onclick="change_size()">Change Font Size</button>
+    <button onclick="change_color()">Change Color</button>
+
+    <script>
+        //change font family
+        function change_font() {
+            var x = document.querySelector("p");
+            x.style.fontFamily = "verdana";
+        }
+        //change font size
+        function change_size() {
+            var x = document.querySelector("p");
+            x.style.fontSize = "20px";
+        }
+        //change font family
+        function change_color() {
+            var x = document.querySelector("p");
+            x.style.color = "hotpink";
+        }
+    </script>
+</body>
+
+</html>

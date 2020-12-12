@@ -1,0 +1,45 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 30
++ Title             : Write a JavaScript program that works as a trim() function using regular expression.
++ Description       : Input string from user and the word or space or any special characters which user wants to trim.
+                      Instead of trim function, use regular expression to trim the entered input from the string.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 29-May-2020
++ End Date          : 29-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 30</title>
+    <style>
+        h2 {
+            color: rgb(106, 19, 128);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>using regular expression instead of trim() to remove space and special characters</h2>");
+        //take input from user
+        var s = prompt("enter string", "string");
+        document.write("<b>Input : " + s);
+        //function call
+        rplce(s);
+
+        //function declaration
+        function rplce(str) {
+            // var reg = /\S/g;
+            var newStr = str.replace(/[^a-zs]/gi, "");         //not a-z means all special chars and s => space  [^a-zs]=>not a-z or(|) space(s)
+            // var str1 = str.match(reg).join("");
+            document.write("<br> Output : " + newStr);
+        }
+    </script>
+</body>
+
+</html>

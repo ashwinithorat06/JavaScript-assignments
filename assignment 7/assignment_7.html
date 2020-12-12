@@ -1,0 +1,73 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 7
++ Title             : Write a Javascript program to determine whether the robot makes a circle or not.
++Description        : Initially, there is a Robot at position (0, 0). Given a sequence of its moves, judge if this robot
+                      makes a circle, which means it moves back to the original place or not.
+                      The move sequence is represented by a string. And each move is represent by a character.
+                      The valid robot moves are R (Right), L (Left), U (Up) and D (down).
+                      The output should be true or false representing whether the robot makes a circle.
+
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 07-May-2020
++ End Date          : 08-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot</title>
+    <style>
+        h2{
+            color: rgb(143, 16, 202);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<h2>Assignment 7</h2>");
+        //take moves
+        var moves = prompt("enter the moves", "U/D/..");
+
+        //if inputed char are in lowercase convert it to uppercase
+        var m = moves.toUpperCase();
+
+        //display entered moves
+        document.write("Input : " +m);
+
+        //converting string to array
+        var strArray = m.split("");
+                
+        //declaration
+        var uc = 0;
+        var rc = 0;
+        //loop
+        for(var i = 0; i<strArray.length; i++){
+
+            switch(strArray[i]){
+                case "U" : uc++;
+                break;
+
+                case "D" : uc--;
+                break;
+
+                case "R" : rc++;
+                break;
+
+                case "L" : rc--;
+                break;
+            }       
+        }
+
+        //checking whether robot is at original position or not and display result
+            if(uc==0 && rc==0){
+                document.write("<br>output : True");
+            }
+            else{
+                document.write("<br>output : false");
+            }        
+    </script>
+</body>
+</html>

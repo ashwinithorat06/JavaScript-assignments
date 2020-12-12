@@ -1,0 +1,58 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 37
++ Title             : Write a JavaScript program a) Create a paragraph using HTML.
+                        b) Create two buttons changeFont and borderImage.
+                        c) When the user click on buttons , the onclick event handler calls function changeParaText and addBorder.
+                        d) The changeParaText function then executes the statement that will change the font color , font size , font family and font weight of 
+                        paragraph and addBorder function will add border image to the paragraph.
++ Description       : Have a <p> paragraph </p> tag and two buttons (change font, border image) in html.
+                      When user clicks on change font button it should change the font, size, font weight, color of the paragragh.
+                      When user clicks on border image button it should add the border to paragraph.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 02-June-2020
++ End Date          : 02-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 37</title>
+    <style>
+        h2 {
+            color: darkmagenta;
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>dom and events handling</h2>
+    <!----create paragraph-->
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident temporibus deleniti voluptatum
+        possimus soluta repudiandae in laudantium reprehenderit sint quidem repellendus, quo autem ducimus quis,
+        voluptatibus libero molestias quod perspiciatis?</p>
+    <!----creating 2 buttons and calling functions on onckick event----->
+    <button onclick="change_font()">Change Font</button>
+    <button onclick="border_image()">Border Image</button>
+    <script>
+        //function declaration
+        function change_font() {
+            var x = document.querySelector("p");
+            x.style.color = "blue";
+            x.style.fontSize = "20px";
+            x.style.fontFamily = "sans-serif";
+            x.style.fontWeight = "lighter";
+        }
+
+        function border_image() {
+            var b = document.querySelector("p");
+            b.style.border = "2px dashed blue";
+            b.style.padding = "10px";
+        }
+    </script>
+</body>
+
+</html>

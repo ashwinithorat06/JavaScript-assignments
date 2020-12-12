@@ -1,0 +1,65 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 45
++ Title             : Write a JavaScript program that will create button
+                      a) For open a new google search window
+                      b) Resize the window .
+                      c) Scroll the window 10 pixels to the right.
+                      d) Move the new window relative to its current position.
++ Description       : Create a webpage with button of value create, resize, scroll.
+                      When user clicks on that button it should open a new google search window.
+                      When user clicks on resize, decrease the size of the window.
+                      When user clicks on scroll, the window should be scrolled left or right.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 05-June-2020
++ End Date          : 05-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 45</title>
+    <style>
+        h2 {
+            color: rgb(145, 167, 23);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>bom</h2>
+    <p>Write a JavaScript program that will create button
+        a) For open a new google search window
+        b) Resize the window .
+        c) Scroll the window 10 pixels to the right.</p>
+    <!----create buttons and invoking functions on click events---->
+    <button onclick="openWindow()">Open Google</button>
+    <button onclick="resizeWindow()">Resize </button>
+    <button onclick="moveWindow()">Move</button>
+    <button onclick="scrollWindow()">Scroll</button>
+
+    <script>
+        var myWindow;
+        //open google window
+        function openWindow() {
+            myWindow = window.open("https://www.google.com");
+        }
+        //resize window
+        function resizeWindow() {
+            myWindow.resizeTo(300, 300);
+        }
+        //move window
+        function moveWindow() {
+            myWindow.moveTo(10, 0);
+        }
+        //move window
+        function scrollWindow() {
+            myWindow.scrollBy(100, 0);
+        }
+    </script>
+</body>
+
+</html>

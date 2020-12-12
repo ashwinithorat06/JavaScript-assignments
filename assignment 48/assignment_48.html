@@ -1,0 +1,43 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 48
++ Title             : Write a JavaScript funtion to check whether a string contains alpha ,dash and underscore.
++ Description       : Input string from user. 
+                      With the help of regular expression check whether string contains any alphanumeric, dash and underscore in it.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 07-June-2020
++ End Date          : 07-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 45</title>
+    <style>
+        h2 {
+            color: rgb(27, 201, 42);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>regular expression</h2>
+    <script>
+        //take input from user
+        var str = prompt("enter string");
+        document.write("<b>Input : " + str);
+        //remove space
+        var newstr = str.replace(/\s/g, "");
+        //check for number, underscore or dash
+        if (newstr.match(/[0-9_-]/g)) {
+            document.write("<br>Output : String contains numeric, underscore or dash");
+        }
+        else
+            document.write("<br>Output : String doesn't contain numeric, underscore or dash");
+    </script>
+</body>
+
+</html>

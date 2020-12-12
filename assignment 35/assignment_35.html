@@ -1,0 +1,60 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 35
++ Title             : Create a Object and get the properties from other object by using Inheritance.
++ Description       : Create a object constructer of Docter() which includes DocName, DocExperiance as properties.
+                      Create another object constructor called Nurse() which includes NurseName, NurseExperiance as properties.
+                      Then add PatientName by using prototype. Get details of PatientName,DocName, DocExperiance, NurseName, NurseExperiance by
+                      using prototype chain Inheritance.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 18-May-2020
++ End Date          : 18-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 35</title>
+    <style>
+        h2 {
+            color: rgb(142, 155, 30);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>object, prototype and inheritance</h2>");
+        function Doctor() {      //parent
+
+        }
+        var Docter1 = new Doctor();
+        Doctor.prototype.DocName = "John";
+        Doctor.prototype.DocExperience = "22 years";
+
+        function Nurse() {       //child
+
+        }
+        // It will only inherit prototype proporties added!! Not all 
+        Nurse.prototype = Doctor.prototype;
+
+        var Nurse1 = new Nurse();
+        Nurse.prototype.NurseName = "Merry";
+        Nurse.prototype.NurseExperience = "6 years";
+
+        Doctor.prototype.PatientName = "William";
+        //display result
+        document.write("<b>Output :<br> DocName : " + Nurse1.DocName);
+        document.write("<br>DocExperiance : " + Nurse1.DocExperience);
+        document.write("<br>NurseName : " + Nurse1.NurseName);
+        document.write("<br>NurseExperience : " + Nurse1.NurseExperience);
+        document.write("<br>PatientName : " + Nurse1.PatientName);
+
+
+    </script>
+</body>
+
+</html>

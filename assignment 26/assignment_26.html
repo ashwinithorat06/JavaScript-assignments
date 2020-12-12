@@ -1,0 +1,48 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 26
++ Title             : Write a JavaScript function to count the number of vowels in a string.
++ Description       : A vowel is a letter of the alphabet (a, e, i, o, u) that represents a speech sound
+                      created by the relatively free passage of breath through the larynx and oral cavity.
+                      This program should accept the string input and display the number of vowels present in that string.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 26-May-2020
++ End Date          : 26-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 26</title>
+    <style>
+        h2 {
+            color: rgb(224, 75, 30);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>count the number of vowels in a string</h2>");
+        //function declaration
+        function vowel() {
+            var s = prompt("enter string", "string");
+            document.write("<b>Input : " + s);
+            let counter = 0;
+            //counting number of vowels
+            for (let i = 0; i < s.length; i++) {
+                if (s[i] == "a" || s[i] == "e" || s[i] == "i" || s[i] == "o" || s[i] == "u" || s[i] == "A" ||
+                    s[i] == "E" || s[i] == "I" || s[i] == "O" || s[i] == "U")
+                    counter += 1;
+            }
+            return counter;
+        }
+        //function call
+        document.write("<br>Output : Number of vowels : " + vowel());
+    </script>
+</body>
+
+</html>

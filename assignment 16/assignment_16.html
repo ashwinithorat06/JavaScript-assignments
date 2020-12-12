@@ -1,0 +1,66 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 16
++ Title             : Write a Javascript program to input 10 numbers in an array and count total positive and negative number.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 08-May-2020
++ End Date          : 08-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 16</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            h2 {
+                color: rgb(228, 48, 153);
+                text-transform: uppercase;
+                word-spacing: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+            document.write("<h2>counting positive and negative numbers</h2>");
+            //declaring an array
+            var arr = [];
+
+            //initializing counter for +ve, -ve numbers
+            var positive = 0;
+            var negative = 0;
+
+            //loop for 10 numbers
+            for (var i = 0; i < 10; i++) {
+                //take 10 numbers from user
+                arr[i] = +(prompt("enter 10 numbers", "numbers"));
+
+                //condition to check +ve or -ve number
+                if (arr[i] >= 0) {
+                    positive++;
+                }
+                else {
+                    negative++;
+                }
+            }
+            //display result
+            document.write("Total number of positive numbers in an array are = " + positive);
+            document.write("<br>Total number of negative numbers in an array are = " + negative);
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

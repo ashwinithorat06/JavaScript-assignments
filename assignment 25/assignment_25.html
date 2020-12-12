@@ -1,0 +1,77 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 25
++ Title             : Write a JavaScript function to check whether it is palindrome or not.
++ Description       : A palindrome is a word, phrase, number, or other sequence of characters which reads the
+                      same backward as forward, such as madam or racecar.
+                      Display whether the input text or number is palindrome or not
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 26-May-2020
++ End Date          : 26-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 25</title>
+    <style>
+        h2 {
+            color: rgb(175, 10, 190);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>check number or string is palindrome or not</h2>")
+        //choose number or string
+        let option = +prompt("for string enter : 1 and for number enter : 2");
+        switch (option) {
+            case 1:
+                palindrome_string();
+                break;
+            case 2:
+                palindrome_number();
+                break;
+        }
+        //for string
+        function palindrome_string() {
+            //take input from user
+            var s = prompt("enter string");
+            document.write("<b>Input : " + s);
+            var revStr = "";
+            for (let j = s.length - 1; j >= 0; j--) {
+                revStr = revStr + s[j];
+            }
+            if (s === revStr) {
+                document.write("<br>Output : The string is Palindrome");
+            }
+            else {
+                document.write("<br>Output : The string is not a Palindrome");
+            }
+        }
+        //for number
+        function palindrome_number() {
+            var num = +prompt("enter number");
+            document.write("<b>Input : " + num);
+            var revNum = 0;
+            var n = num;
+            while (num != 0) {
+                rem = num % 10;
+                revNum = rem + (revNum * 10);
+                num = parseInt(num / 10);
+            }
+            if (revNum == n) {
+                document.write("<br>Output : Number is palindrome");
+            }
+            else
+                document.write("<br>Output : Number is not palindrome");
+        }
+    </script>
+
+</body>
+
+</html>

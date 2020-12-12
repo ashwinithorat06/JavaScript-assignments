@@ -1,0 +1,64 @@
+<!----------------------------------------------------------------------------------------
++ Classwork No      : 15
++ Title             : Write a program to print following rhombus:
+                           *
+                         * * *
+                       * * * * *
+                     * * * * * * *
+                       * * * * *
+                         * * *
+                           *
+
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 30-April-2020
++ End Date          : 30-April-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork-15</title>
+</head>
+<body>
+    <script>
+      //assigning rows to 1 and increasing upto 4
+      for (var rows = 1; rows<=4; rows++){
+
+        //assigning cols to 1 and increasing upto 7
+        for (cols=1; cols<=7; cols++){
+
+           //printing *
+          if (cols>=5-rows && cols<=3+rows){
+            document.write("&nbsp;*&nbsp;");
+          }
+
+          //printing space
+          else {
+            document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+          }
+        }
+
+        //line break
+        document.write("<br>");
+      }
+
+      //assigning rows to 3 and decreasing upto 1
+      for (var rows = 3; rows>=1; rows--){
+
+        //assigning cols to 1 and increasing upto 7
+        for (cols=1; cols<=7; cols++){
+
+          if (cols>=5-rows && cols<=3+rows){
+            document.write("&nbsp;*&nbsp;");
+          }
+
+          else {
+            document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+          }
+        }
+        document.write("<br>");
+      }
+    </script>
+</body>
+</html>

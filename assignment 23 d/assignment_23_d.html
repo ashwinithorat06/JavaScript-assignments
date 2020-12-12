@@ -1,0 +1,48 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 23-d
++ Title             : Write a JavaScript program to reverse a given string.
++Description        : Reverse a given string e.g if the string is Hello then output should be olleH.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 21-May-2020
++ End Date          : 21-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 23-d</title>
+    <style>
+        h2 {
+            color: rgb(18, 172, 151);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>reverse a given string</h2>");
+
+        //function declaration
+        function reverse_string(str) {
+            var revstr = "";
+            //reverse string
+            for (i = (str.length - 1); i >= 0; i--) {
+                revstr += str[i];
+            }
+            //display result
+            document.write("<b>Input : " + str);
+            document.write("<br>Output : " + revstr);
+        }
+        //take string
+        var s = prompt("enter string");
+
+        //function call
+        reverse_string(s);
+    </script>
+</body>
+
+</html>

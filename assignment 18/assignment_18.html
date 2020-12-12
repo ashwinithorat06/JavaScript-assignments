@@ -1,0 +1,54 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 18
++ Title             : Write a Javascript program to compute sum and product of array of integer.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 08-May-2020
++ End Date          : 08-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 18</title>
+    <style>
+        h2 {
+            color: rgb(146, 13, 90);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>sum and product of array of integer</h2>");
+        //function declaration
+        function cal(num) {
+
+            //declaring an array
+            var arr = [];
+            //assigning sum to 0 and product=1
+            var sum = 0, product = 1;
+            //loop for n numbers
+            for (var i = 0; i < num; i++) {
+                arr[i] = +prompt("enter number");
+                sum += parseInt(arr[i]);
+                product *= parseInt(arr[i]);
+            }
+            //display result
+            document.write("<b>Array of numbers is : " + arr);
+            document.write("<br><br>the sum of elements of an array is: " + sum);
+            document.write("<br><br>product of elements of an array is: " + product);
+        }
+
+        //getting the size of array
+        var n = +prompt("how many numbers do you want to enter");
+
+        //function call
+        cal(n);
+    </script>
+</body>
+
+</html>

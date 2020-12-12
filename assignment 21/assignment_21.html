@@ -1,0 +1,75 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 21
++ Title             : Write a Javascript program to determine the perimeter of the island.
++Description        : You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
+                      Grid cells are connected horizontally/vertically (not diagonally). The grid is completely
+                      surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
+                      The island doesn't have "lakes" (water inside that isn't connected to the water around the island).
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 15-May-2020
++ End Date          : 15-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            color: rgb(202, 29, 87);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>perimeter of island</h2>");
+
+        //declaration
+        var arr = [[0, 1, 0, 0],
+        [1, 1, 1, 0],
+        [0, 1, 0, 0],
+        [1, 1, 0, 0]
+        ];
+
+        let row = 4;
+        let col = 4;
+        var perimeter = 0;
+        //function declaration
+        function count_neb(i, j) {
+            let count = 0;
+            //for ups
+            if (i > 0 && arr[i - 1][j] === 1) {
+                count++;
+            }
+            //for downs
+            if (i < row - 1 && arr[i + 1][j] === 1) {
+                count++;
+            }
+            //for left
+            if (j > 0 && arr[i][j - 1]) {
+                count++;
+            }
+            //for right
+            if (j < col - 1 && arr[i][j + 1] === 1) {
+                count++;
+            }
+            return count;
+        }
+
+        for (var i = 0; i < row; i++) {
+            for (var j = 0; j < col; j++) {
+                if (arr[i][j] === 1) {
+                    perimeter = perimeter + 4 - count_neb(i, j);
+                }
+            }
+        }
+        document.write("perimeter is " + perimeter);
+    </script>
+</body>
+
+</html>

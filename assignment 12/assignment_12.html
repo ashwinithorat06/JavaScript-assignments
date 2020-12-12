@@ -1,0 +1,51 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 12
++ Title             : Write a Javascript program to swap the word from lowercase to uppercase and vice versa.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 08-May-2020
++ End Date          : 08-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 12</title>
+    <style>
+        h2 {
+            color: rgb(236, 11, 116);
+            text-transform: uppercase;
+            word-spacing: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>swap the word from lowercase to uppercase and vice versa</h2>")
+        //take input from user
+        var str = prompt("Enter string to be converted");
+
+        //convert string to array
+        var strArray = str.split("");
+
+        //declare var a as string
+        var a = "";
+        //loop
+        for (var i = 0; i < strArray.length; i++) {
+            //if string in in lowercase convert into uppercase
+            if (strArray[i] === strArray[i].toLowerCase()) {
+                a = a + strArray[i].toUpperCase();
+            }
+            //else convert to lowercase
+            else {
+                a = a + strArray[i].toLowerCase();
+            }
+        }
+        //display result
+        document.write("Converted string is " + a);
+    </script>
+</body>
+
+</html>

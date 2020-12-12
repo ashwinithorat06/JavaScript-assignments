@@ -1,0 +1,44 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 28
++ Title             : Write a JavaScript recursion function to reverse a given string.
++ Description       : Reverse a given string e.g if the string is Hello then output should be olleH.
+                      Accept the input string from user. Reverse that string usong recursion function.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 28-May-2020
++ End Date          : 28-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 28</title>
+    <style>
+        h2 {
+            color: rgb(55, 150, 18);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>reverse a given string using recursion function</h2>");
+        //function declaration
+        function rev_str(str) {
+            if (str === "")
+                return "";
+            else
+                return rev_str(str.substr(1)) + str.charAt(0);
+        }
+        //take input from user
+        var s = prompt("enter string");
+        document.write("<b>Input : " + s);
+        //function call
+        document.write("<br>Output : Reversed string is : " + rev_str(s));
+    </script>
+</body>
+
+</html>

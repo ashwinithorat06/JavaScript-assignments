@@ -1,0 +1,40 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 34
++ Title             : Create a object and add a property by using prototype.
++Description        : Create a object of person which includes firstName, age, phoneNumber as properties.
+                      Add lastname by using prototype to the object and get details of mother and father.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 18-May-2020
++ End Date          : 18-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 34</title>
+</head>
+
+<body>
+    <script>
+        //function constructor
+        var person = function (name, age, number) {
+            this.name = name;
+            this.age = age;
+            this.number = number;
+        }
+
+        //add property using prototype
+        person.prototype.last = "A H";
+        var person1 = new person("Rohan", 24, 9125457896);
+
+        //display result
+        document.write("first name : " + person1.name);
+        document.write("<br>last name : " + person1.last);
+        document.write("<br>age : " + person1.age);
+        document.write("<br>number : " + person1.number);
+    </script>
+</body>
+
+</html>

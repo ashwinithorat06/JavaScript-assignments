@@ -1,0 +1,52 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 11
++ Title             : Write a Javascript program to generate armstrong number of three digits.
+                      Generate such 3 digit numbers fron 100 to 999.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 05-May-2020
++ End Date          : 05-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+    <style>
+        h2 {
+            color: darkblue;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //display title
+        document.write("<h2>armstrong numbers from 100 to 999</h2>");
+        //declaring variables
+        var n, temp, rem, sum;
+
+        //taking n from 100 to 999
+        for (n = 100; n <= 999; n++) {
+            //assigning temp to n
+            temp = n;
+            //assigning sum to 0
+            sum = 0;
+            //loop untill temp not equal to 0
+            while (temp != 0) {
+                rem = temp % 10;
+                sum = sum + (rem * rem * rem);
+                temp = parseInt(temp / 10);
+
+            }
+            // if number is equal to the sum of cubes of its digits then number is an Armstrong Number.
+            if (sum == n) {
+                document.write("<b>" + n + "<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

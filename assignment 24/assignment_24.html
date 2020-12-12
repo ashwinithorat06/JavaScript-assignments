@@ -1,0 +1,59 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 24
++ Title             : Write a Javascript program to display the longest word from the given string.
++ Description       : Consider a given string “Hello All How Are You All Doing””.
+                      From the above string the longest word is “Hello Doing”.
+                      Your job is to display the “Hello Doing” to the user.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 23-May-2020
++ End Date          : 23-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 24</title>
+    <style>
+        h2 {
+            color: rgb(106, 27, 209);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>longest word in the given string</h2>");
+        //function declaration
+        function longest_word(str) {
+            document.write("<b>String Input : " + str);
+            //split string into array
+            var arr = str.split(" ");
+            //declaration
+            var longest = 0;
+            for (var i = 0; i < arr.length; i++) {
+                //longest word
+                if (longest < arr[i].length) {
+                    longest = arr[i].length;
+                }
+            }
+            document.write("<br>Output : Longest word length is : " + longest + "<br>Output : Longest word is : ");
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].length === longest) {
+                    //display result
+                    document.write(" " + arr[i]);
+                }
+            }
+        }
+        //take input from user
+        var s = prompt("enter string");
+        //function call
+        longest_word(s);
+    </script>
+</body>
+
+</html>

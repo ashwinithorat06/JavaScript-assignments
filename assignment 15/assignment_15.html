@@ -1,0 +1,46 @@
+<!-------------------------------------------------------------------------------------
++ Assignment No     : 15
++ Title             : Write a Javascript Function to generate the unique PIN number of given length n.
++ Description       : Given the length, your job is to generate the unique PIN number.
+                      For example, if user enters length as 4 then u should generate 4 digit unique number for
+                      individual user.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 08-May-2020
++ End Date          : 08-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 15</title>
+    <style>
+        h2 {
+            color: fuchsia;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function pin() {
+            document.write("<h2>generate unique pin of given length</h2>");
+            var n = +(prompt("enter length to generate unique PIN number"));
+            document.write("<b>Input : length : " + n);
+            var pin = [];
+            //generate pin of entered length
+            for (let i = 0; i < n; i++) {
+                //floor method rounds a number downwards to nearest integer.
+                //random method returns a number from 0 upto but not including 1.
+                pin[i] = Math.floor(Math.random() * 9) + 1;
+            }
+            document.write("<br>Output : Generated pin : " + pin.join(""));
+        }
+        //function call
+        pin();
+    </script>
+</body>
+
+</html>

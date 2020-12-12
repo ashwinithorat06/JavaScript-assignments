@@ -1,0 +1,50 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 36-c
++ Title             : Write a JavaScript function to find area of triangle where length of the 3 sides are given by the user.
++ Description       : In the mathemetics area of triangle will be calculated as (when length of the 3 sides are given).
+                      s=(l+b+h)/2
+                      area =square root of s*((s-l)*(s-b)*(s*h))
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 01-June-2020
++ End Date          : 01-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 36-c</title>
+    <style>
+        h2 {
+            color: hotpink;
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>the area of triangle</h2>");
+        function triangle_area() {
+            //take input
+            var l = +prompt("enter length of triangle", "length");
+            var b = +prompt("enter breadth of first side", "breadth");
+            var h = +prompt("enter height of first side", "height");
+            document.write("<b>Input : 3 sides of triangle are = " + l + ", " + b + ", " + h);
+            //condition
+            if (l + b >= h || l + h >= b || b + h >= l) {
+                var s = (l + b + h) / 2;
+                //area
+                var area = Math.sqrt(s * ((s - l) * (s - b) * (s * h)));
+                document.write("<br>Output : Area of Triangle is = " + area);
+            }
+            else
+                window.alert("you have entered wrong values");
+        }
+        triangle_area();
+    </script>
+</body>
+
+</html>

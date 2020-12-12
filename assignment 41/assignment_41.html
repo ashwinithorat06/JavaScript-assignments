@@ -1,0 +1,59 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 41
++ Title             : Write a JavaScript program to a) count and display the items in a list box in a alert window.
+                      b) remove items from a dropdown list.
++ Description       : Create a html page with a dropdownlist which should contains list of items.
+                      Your job is call a function in javascript which will display the number of items in list and
+                      delete() function which will delete the specified state from that list.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 03-June-2020
++ End Date          : 03-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 41</title>
+    <style>
+        h2 {
+            color: rgb(10, 114, 74);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>count and display and remove items from a dropdown list</h2>
+    <!----create list---->
+    <select id="state">
+        <option value="Karnataka">Karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Tamilanadu">Tamilanadu</option>
+        <option value="Telangana">Telangana</option>
+        <option value="UP">UP</option>
+    </select><br><br>
+    <!----create buttons and invoking functions on click events---->
+    <button onclick="list()">Count</button>
+    <button onclick="delete_state()">Delete State</button>
+
+    <script>
+        //function declaration
+        function list() {
+            //count items
+            var a = document.getElementById("state").length;
+            window.alert("Number of items in list are : " + a);
+        }
+
+        function delete_state() {
+            var b = document.getElementById("state");
+            //delete item
+            b.remove(b.selectedIndex);
+        }
+    </script>
+
+</body>
+
+</html>

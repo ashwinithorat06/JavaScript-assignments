@@ -1,0 +1,43 @@
+<!----------------------------------------------------------------------------------------
++ Classwork No      : 13
++ Title             : Write a program to print the line with two different pattern chars.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 30-April-2020
++ End Date          : 30-April-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork-13</title>
+</head>
+<body>
+    <script>
+        //take total number of pattern chars value from user
+        var n = Number(prompt("Enter total number of pattern chars in a line", "it should be odd"));
+
+        //take total number of middle chars value from user
+        var m = Number(prompt("enter number of pattern char to be printed in the middle of line", "it should be odd"));
+
+        //calculate chars to be printed on both sides of middle chars
+        var s = (n - m)/2;
+
+        //printing first pattern
+        for (var i=0; i<s; i++) {
+            document.write("$");
+        }
+
+        //printing middle pattern
+        for (var i=0; i<m; i++) {
+            document.write("*");
+        }
+
+        //printing third pattern
+        for (var i=0; i<s; i++) {
+            document.write("$");
+        }
+
+    </script>
+</body>
+</html>

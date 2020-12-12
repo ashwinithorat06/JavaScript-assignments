@@ -1,0 +1,70 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 44
++ Title             : Write a JavaScript program a) To make a paragraph using createElement method
+                      b) Create a new node with nav element .
+                      c) Create a text node with <strong> element.
+                      d) Add two node in the parent node.
++ Description       : Create a paragraph in webpage using createElement method of javascript.
+                      Create new node in that page with nav element.
+                      Add a text node with <strong> element.
+                      Add two node to the parent node of that web page.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 04-June-2020
++ End Date          : 04-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 44</title>
+    <style>
+        h2{
+            color: rgb(110, 25, 160);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>dom, node and nodelist handling</h2>
+    <!----create buttons and invoking functions on click events---->
+    <button onclick="createPara()">Create Para</button>
+    <button onclick="createNav()">Create Nav</button>
+    <button onclick="createStrong()">Create Strong</button>
+
+    <script>
+        function createPara(){
+            //create paragraph element
+            var para = document.createElement("p");
+            document.body.appendChild(para);
+            para.innerHTML = "This is paragraph<br>";
+        }
+
+        function createNav(){
+            //create nav elememt
+            var navElem = document.createElement("nav");
+            document.body.appendChild(navElem);
+
+            var ulElem = document.createElement("ul");
+            navElem.appendChild(ulElem);
+
+            var list = document.createElement("li");
+            ulElem.appendChild(list);
+            list.innerHTML="<a href = https://www.google.com target=_blank>google</a>";
+
+            var list1 = document.createElement("li");
+            ulElem.appendChild(list1);
+            list1.innerHTML="<a href = https://www.yahoo.com target=_blank>yahoo</a>";
+        }
+
+        function createStrong(){
+            //text node with strong element
+            var strong1 = document.createElement("strong");
+            var text = document.createTextNode("This is strong paragraph");
+            strong1.appendChild(text);
+            document.body.appendChild(strong1);
+        }
+    </script>
+</body>
+</html>

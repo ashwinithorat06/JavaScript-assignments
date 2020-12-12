@@ -1,0 +1,48 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 22
++ Title             : Write a Javascript program to scramble the word to given position.
++Description        : Accept a input string and position to shuffle the each word of the string.
+                      For example, if user enters string “abcd” and position as 3,1,0,2 then the output should be dbac.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 09-May-2020
++ End Date          : 09-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 22</title>
+</head>
+
+<body>
+    <script>
+        function out(a, b) {
+            var newstr = "";
+            var str_spl = a.split("");//split the string
+            var num_spl = b.split("");//split the position
+            //scrambling word according to position
+            for (var i = 0; i < num_spl.length; i++) {
+                var arr = [];
+                arr[i] = parseInt(num_spl[i]);
+
+                newstr += str_spl[arr[i]];
+            }
+
+            //returning the scrambled words
+            return newstr;
+        }
+
+        //inputting string
+        var str = prompt("Enter string");
+        //getting position 
+        var position = prompt("Enter position");
+        //displaying the inpitted string and position
+        document.write("Input String : " + str + "<br> position :" + position);
+        //displaying scrambled words
+        document.write("<br><br>Output : " + out(str, position));
+    </script>
+</body>
+
+</html>

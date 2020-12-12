@@ -1,0 +1,45 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 38
++ Title             : Write a JavaScript to display a image and a) When the user places the cursor over the image change the image.
+                      b) When the user removes the cursor from the image, display the old image.
++ Description       : Have a image in html document.  Whenever user place the cursor over the image, that image should be replaced with 
+                      another image and when cursor is moved it should display the previous image.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 02-June-2020
++ End Date          : 02-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 38</title>
+    <style>
+        h2 {
+            color: rgb(119, 16, 64);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>image manipulation</h2>
+    <p>birds images</p>
+    <img id="one" src="1.jpg" width="500px" height="300px" onmouseover="change_image()" onmouseout="original_image()">
+
+    <script>
+        //function declaration
+        //when mouseover
+        function change_image() {
+            document.getElementsByTagName("img")[0].src = "2.jpg";   //using TagName
+        }
+        //when mouseout
+        function original_image() {
+            document.getElementById("one").src = "1.jpg";
+        }
+    </script>
+</body>
+
+</html>

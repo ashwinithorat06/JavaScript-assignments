@@ -1,0 +1,39 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 36-a
++ Title             : Write a JavaScript program to display the hello message along with the user name.
++ Description       : Ask the user to enter the name and store that name in a variable.
+                      Using the document.write display hello user name in big bold letter surrounded by <h1> tag.
+                      Also display the welcome username in alert message box.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 01-June-2020
++ End Date          : 01-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 36-a</title>
+    <style>
+        h2 {
+            color: rgb(87, 172, 18);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>display the hello message along with the user name</h2>");
+        //take input
+        var name = prompt("enter your name", "name");
+        //alert
+        window.alert("Welcome " + name);
+        //display result
+        document.write("<h1>Hello " + name + "</h2");
+    </script>
+</body>
+
+</html>

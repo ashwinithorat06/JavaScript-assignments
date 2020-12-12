@@ -1,0 +1,34 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 46
++ Title             : Write a JavaScript program to display your name in every 30 seconds using timer.
++ Description       : Create a webpage which should display the user name in every 30 seconds
+                      Use timer function of BOM.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 05-June-2020
++ End Date          : 05-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 45</title>
+    <style>
+        h2 {
+            color: rgb(27, 201, 42);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>bom-timer function</h2>
+    <script>
+        //using call back function to display name in setInterval method
+        setInterval(function () { document.write("Ashwini"); }, 3000);
+    </script>
+</body>
+
+</html>

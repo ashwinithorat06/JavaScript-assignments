@@ -1,0 +1,42 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 36-b
++ Title             : Write a JavaScript function to change the content of paragraph.
++ Description       : Consider in html you have a paragraph e.g
+                      <p>This is paragraph </p>
+                      Your job is to replace the content to new one. e.g above paragraph should be replaced as
+                      “This is changed Paragraph”.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 01-June-2020
++ End Date          : 01-June-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 36-b</title>
+    <style>
+        h2 {
+            color: rgb(18, 172, 151);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>change the content of paragraph</h2>
+    <!----paraghraph---->
+    <p id="one">This is paraghraph</p>
+    <!----creating button---->
+    <button onclick="change_para()">click here</button>
+    <script>
+        function change_para() {
+            //changing content
+            document.getElementById("one").innerHTML = "This is changed paraghraph!!";
+        }
+    </script>
+</body>
+
+</html>

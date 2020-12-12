@@ -1,0 +1,40 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 10
++ Title             : Write a Javascript program to input any two number and swap that without using third variable.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 05-May-2020
++ End Date          : 05-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-10</title>
+    <style>
+        h2 {
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //display title
+        document.write("<h2>swap two numbers w/o third var</h2>")
+        //take two numbers from user
+        var a = +(prompt("enter first number", "a"));
+        var b = +(prompt("enter second number", "b"));
+        //display numbers entered from user
+        document.write("<b>Entered numbers are <br>a = " + a + "<br>b = " + b);
+        //swapping numbers
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        //displaying swapped numbers
+        document.write("<br><br>Numbers after swapping are <br>a = " + a + "<br>b = " + b);
+    </script>
+</body>
+
+</html>

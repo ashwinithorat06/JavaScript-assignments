@@ -1,0 +1,41 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 32
++ Title             : Write a JavaScript program
+                    a) To create employee object and access all the properties of employee.
+                    b) To delete deptName property from employee object.
+                    c) To find the length of employee object.
+
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 18-May-2020
++ End Date          : 18-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 32</title>
+</head>
+
+<body>
+    <script>
+        //create literal object
+        var employee = { name: "Raghunath", id: 001, salary: 20000, dept: "WSA" };
+
+        //display all properties
+        document.write("a)<br>Employee name : " + employee.name);
+        document.write("<br>Employee id : " + employee.id);
+        document.write("<br>Employee salary : " + employee.salary);
+        document.write("<br>Employee department : " + employee.dept);
+
+        //length of employee object
+        document.write("<br><br>b) Length of employee object : " + (Object.keys(employee).length));
+
+        //delete dept property
+        delete employee.dept;
+        document.write("<br><br>c) Employee department : " + employee.dept);
+    </script>
+</body>
+
+</html>

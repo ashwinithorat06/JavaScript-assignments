@@ -1,0 +1,52 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 27
++ Title             : Write a JavaScript function to accept a parameter as a string and converts the first letter of each word in uppercase letter.
++ Description       : Accept the input string from user.
+                      Convert first character from each word to uppercase.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 27-May-2020
++ End Date          : 27-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 27</title>
+    <style>
+        h2 {
+            color: rgb(18, 172, 151);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>converts the first letter of each word in uppercase letter of string</h2>");
+        //function declaration
+        function capitalize(str) {
+            //convert string to array
+            var strArr = str.split(" ");
+            var newStr = "";
+            document.write("<b>Input: " + str);
+            for (let i = 0; i < strArr.length; i++) {
+                let a = strArr[i];
+                if (a == "am" || a == "is" || a == "are" || a == "was" || a == "were") {
+                    newStr += a + " ";
+                }
+                else
+                    newStr = newStr + strArr[i][0].toUpperCase() + strArr[i].slice(1) + " ";
+            }
+            document.write("<br>Output: " + newStr);
+        }
+        //take input string from user
+        var s = prompt("enter string");
+        //function call
+        capitalize(s); 
+    </script>
+</body>
+
+</html>

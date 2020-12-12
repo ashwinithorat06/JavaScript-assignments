@@ -1,0 +1,50 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 23-c
++ Title             : Write a JavaScript program to capitalize the first letter of each word in a string.
++Description        : Capitalise each word of the string e.g if the string is “hello world” then the output should be “Hello World”.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 21-May-2020
++ End Date          : 21-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 23-c</title>
+    <style>
+        h2 {
+            color: rgb(8, 173, 71);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>capitalize the first letter of each word in a string</h2>");
+
+        //function declaration
+        function capitalize_first(str) {
+            //take input string from user
+            var str = prompt("enter string");
+            document.write("<b>Input : " + str);
+
+            //split into array
+            var arr = str.split(" ");
+            // document.write(arr);
+
+            for (let i = 0; i < arr.length; i++) {
+                //convert first letter of each word into capital 
+                arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+            }
+            document.write("<br>Output : " + arr.join(" "));
+        }
+        //function call
+        capitalize_first();
+    </script>
+</body>
+
+</html>

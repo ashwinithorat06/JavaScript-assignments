@@ -1,0 +1,40 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 9-c
++ Title             : Write a Javascript program To check whether a value is numeric or not.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 05-May-2020
++ End Date          : 05-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-9c</title>
+    <style>
+        h3{
+            color: hotpink;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<h3>9-c)value is numeric/not</h3>");
+        //take value from user
+        var value = prompt("enter a value", "value");
+        document.write("<b>Input : " +value);
+        //check whether it is numeric or not
+        var result = isNaN(value);
+
+        //display result
+        if(result == false){
+            document.write("<br><b>Output : Entered value is numeric value");
+        }
+        else{
+            document.write("<br><b>Output : Entered value is not numeric value");
+        }
+    </script>
+
+</body>
+</html>

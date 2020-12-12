@@ -1,0 +1,56 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 9-d
++ Title             : Write a Javascript program To get the number of days in a month.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 05-May-2020
++ End Date          : 05-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-9d</title>
+    <style>
+        h3{
+            color: lightseagreen;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //display title
+        document.write("<h3>9-d)number of days in a month</h3>")
+        //take month from user
+        var month = prompt("enter month", "month");
+        //display month
+        document.write("<b>Input : " +month)
+        switch(month){
+            case "january":
+            case "march":
+            case "may":
+            case "july":
+            case "august":
+            case "october":
+            case "december":
+                //display days in entered month
+                document.write("<br><b>Output : Days in " +month+ " month is = 31");
+                break;
+
+            case "april":
+            case "june":
+            case "september":
+            case "november":
+                //display days in entered month
+                document.write("<br><b>Output : Days in " +month+ " month is = 30");
+                break;
+
+            case "february":
+                //display days in entered month
+                document.write("<br><b>Output : Days in " +month+ " month is = 28/29");
+                break;  
+        }
+    </script>
+</body>
+</html>

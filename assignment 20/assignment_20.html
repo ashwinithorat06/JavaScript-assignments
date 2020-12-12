@@ -1,0 +1,62 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 20
++ Title             : Given an array of 2n integers, write a JavaScript program to find sum of min(ai, bi).
++Description        : Given an array of 2n integers, your task is to group these integers into n pairs of integer, say (a1,b1),
+                      (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 09-May-2020
++ End Date          : 09-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 20</title>
+    <style>
+        h2 {
+            color: rgb(31, 148, 156);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>sum of min(ai, bi)</h2>");
+
+        //function declaration
+        function add(a) {
+            //declare array and sum
+            var arr = [];
+            var sum = 0;
+
+            //loop to enter array elements
+            for (var i = 0; i < (2 * a); i++) {
+                arr[i] = +prompt("enter number");
+            }
+            document.write("<b>Input : [ " + arr + " ]<br>");
+
+            //loop to find sum
+            for (i = 0; i < (2 * a); i = i + 2) {
+                if (arr[i] < arr[i + 1]) {
+                    sum += arr[i];
+                }
+                else
+                    sum += arr[i + 1];
+            }
+
+            //display sum
+            document.write("Output : " + sum);
+        }
+
+        //take n value fron user
+        var n = +(prompt("enter n value"));
+        //function call
+        add(n);
+    </script>
+</body>
+
+</html>

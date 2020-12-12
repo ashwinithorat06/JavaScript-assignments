@@ -1,0 +1,48 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 14
++ Title             : Write a Javascript program to generate fibonaci series.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 07-May-2020
++ End Date          : 07-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibonacci</title>
+    <style>
+        h2 {
+            color: fuchsia;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>Fibonacci series</h2>");
+
+        //take length of series from user
+        var n = +(prompt("Enter the range of fibonacci numbers you want to display", "n"));
+
+        //declaretion of variables
+        var a1 = 0;
+        var a2 = 1;
+
+        //display a1 and a2
+        document.write(a1);
+        document.write("," + a2);
+
+        //loop for printing series
+        for (var i = 2; i <= n; i++) {
+            var sum = a1 + a2;
+            document.write("," + sum);
+            a1 = a2;
+            a2 = sum;
+        }
+    </script>
+</body>
+
+</html>

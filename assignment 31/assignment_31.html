@@ -1,0 +1,47 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 31
++ Title             : Write a JavScript function to find factors of a positive integer.
++ Description       : "Factors" are the numbers you multiply to get another number. For instance, factors of 15 are 3 and 5, 
+                      because 3×5 = 15. Some numbers have more than one factorization (more than one way of being factored). For instance, 12 can 
+                      be factored as 1×12, 2×6, or 3×4.  Your job is to find the factors of the entered number.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 28-May-2020
++ End Date          : 28-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 31</title>
+    <style>
+        h2 {
+            color: deepskyblue;
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>factors of a positive integer</h2>");
+        //function declaration
+        function factors(num) {
+            document.write("<b>Input : " + num)
+            var arr = [];
+            for (let i = 1; i <= num; i++) {
+                if (num % i == 0)
+                    arr.push(i);
+            }
+            document.write("<br>Output : Factors of " + num + " = " + arr);
+        }
+        //take input from user
+        var n = +prompt("enter number");
+        //function call
+        factors(n);
+    </script>
+</body>
+
+</html>

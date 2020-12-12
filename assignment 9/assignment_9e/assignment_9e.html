@@ -1,0 +1,49 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 9-e
++ Title             : Write a Javascript program To get the number of days in a year.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 05-May-2020
++ End Date          : 05-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-9e</title>
+    <style>
+        h3{
+            color: mediumvioletred;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<h3>9-e)number of days in a year</h3>");
+        //take year from user
+        var year = +(prompt("Enter year","year"));
+
+        // 1) If the year is divisible by 4, go to step 2. Else, go to step 5.
+        // 2) If the year is divisible by 100, go to step 3. Else, go to step 5.
+        // 3) If the year is divisible by 400, go to step 4. Else, go to step 5.
+        // 4) The year is a leap year (it has 366 days).
+        // 5) The year is not a leap year (it has 365 days).
+        if(year%4 == 0){
+
+            if(year%100 == 0){
+
+                if(year%400 == 0){
+                    document.write("<b>" +year+" is a leap year.<br>It has 366 days");
+                }
+                else 
+                document.write("<b>" +year+" is not a leap year.<br>It has 365 days");
+            }
+            else
+            document.write("<b>" +year+" is a leap year.<br>It has 366 days");
+        }
+        else
+        document.write("<b>" +year+" is not a leap year.<br>It has 365 days");
+    </script>
+</body>
+</html>

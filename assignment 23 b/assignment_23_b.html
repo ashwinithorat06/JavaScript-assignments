@@ -1,0 +1,39 @@
+<!----------------------------------------------------------------------------------------
++ Assignment No     : 23-b
++ Title             : Write a JavaScript program to split a string and convert it into array of words.
++ Description       : In this case you must be able to split the string and store it to the array and display that array to the user.
++ Author            : Ashwini Shreyas Thorat.        
++ Start Date        : 20-May-2020
++ End Date          : 20-May-2020
+-------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 23-b</title>
+    <style>
+        h2 {
+            color: rgb(51, 89, 192);
+            text-transform: uppercase;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>split string and convert to array of words</h2>");
+
+        //take string from user
+        var str = prompt("enter string");
+        document.write("Input : " + str);
+        //convert into array
+        var arr = str.split(" ");
+        //display array
+        document.write("<br>Output : " + arr.join());
+    </script>
+</body>
+
+</html>
